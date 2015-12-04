@@ -9,6 +9,7 @@
 #import "PushVC.h"
 
 @interface PushVC ()
+- (IBAction)pushStatus:(UIButton *)sender;
 
 @end
 
@@ -34,4 +35,6 @@
 }
 */
 
+- (IBAction)pushStatus:(UIButton *)sender {
+}
 @end

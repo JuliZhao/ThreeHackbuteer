@@ -19,16 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-mX-LRw">
-                                <rect key="frame" x="140" y="162" width="40" height="36"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <size key="titleShadowOffset" width="5" height="5"/>
-                                <state key="normal" title="登陆"/>
-                                <connections>
-                                    <segue destination="dLl-Fw-MfK" kind="push" id="aba-tE-lm0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVz-p1-z1v">
                                 <rect key="frame" x="133" y="255" width="54" height="34"/>
                                 <animations/>
@@ -45,7 +35,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="没有账号？快来注册~"/>
                                 <connections>
-                                    <segue destination="KfS-E8-CmT" kind="push" id="8OX-HT-MPf"/>
+                                    <segue destination="KfS-E8-CmT" kind="showDetail" id="gO7-aL-X2k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-mX-LRw">
+                                <rect key="frame" x="140" y="164" width="40" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <size key="titleShadowOffset" width="5" height="5"/>
+                                <state key="normal" title="登陆"/>
+                                <connections>
+                                    <segue destination="dLl-Fw-MfK" kind="showDetail" id="L4T-GR-ZtY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,7 +143,13 @@
                             <constraint firstItem="q9h-EM-yaz" firstAttribute="width" secondItem="vwC-oZ-vfJ" secondAttribute="width" id="xf8-sT-Xgm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WxT-oQ-TwN"/>
+                    <navigationItem key="navigationItem" id="WxT-oQ-TwN">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="fco-CL-mWB">
+                            <connections>
+                                <segue destination="JNu-80-sZa" kind="showDetail" id="5Iw-vr-pgM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="userNameTF" destination="vwC-oZ-vfJ" id="8sq-S3-TWo"/>
                         <outlet property="userPswTF" destination="q9h-EM-yaz" id="1v5-Tj-9aO"/>
@@ -151,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynF-7E-vy6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="1410"/>
+            <point key="canvasLocation" x="-379" y="1151"/>
         </scene>
         <!--广场-->
         <scene sceneID="LrN-EO-zbn">
@@ -269,7 +275,19 @@
                             <constraint firstItem="Kh5-4G-hdw" firstAttribute="centerX" secondItem="h2v-3p-YK2" secondAttribute="centerX" multiplier="1.25" id="zsm-Fu-FXX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KNx-aP-0mW"/>
+                    <navigationItem key="navigationItem" id="KNx-aP-0mW">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="QZg-Vn-Hjf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Qh-ut-O3c">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="action4Back:" destination="Ncz-EH-Qye" eventType="touchUpInside" id="GG0-wI-zec"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTF" destination="Kh5-4G-hdw" id="fpA-e4-RtB"/>
                         <outlet property="nameTF" destination="DsL-L7-AdH" id="ggF-8n-VRR"/>
@@ -278,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exY-cS-TeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="898"/>
+            <point key="canvasLocation" x="168" y="1260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ooq-y8-Z0q">
@@ -298,7 +316,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hR-vd-kzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154" y="1410"/>
+            <point key="canvasLocation" x="-372" y="876"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ewj-RE-cBo">
@@ -318,7 +336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDz-7W-h07" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="891"/>
+            <point key="canvasLocation" x="-18" y="903"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nLT-74-z3c">
@@ -340,7 +358,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDc-Fe-cJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="285"/>
+            <point key="canvasLocation" x="287" y="373"/>
         </scene>
         <!--广场-->
         <scene sceneID="c6j-Un-lpk">
@@ -380,9 +398,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4h-Re-XxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="285"/>
+            <point key="canvasLocation" x="734" y="120"/>
         </scene>
-        <!--PushVC-->
+        <!--发布心情-->
         <scene sceneID="ITS-Ga-gL4">
             <objects>
                 <viewController id="zhV-QJ-YlV" customClass="PushVC" sceneMemberID="viewController">
@@ -412,11 +430,23 @@
                             <constraint firstItem="peh-Si-uOD" firstAttribute="height" secondItem="HLK-iP-3Qr" secondAttribute="height" multiplier="0.4" id="zcr-Vf-7F6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gHt-Li-rJ9"/>
+                    <navigationItem key="navigationItem" title="发布心情" id="gHt-Li-rJ9">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="xmp-3M-33E">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2BM-J0-gKf">
+                                <rect key="frame" x="279" y="9" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" image="导航.png"/>
+                                <connections>
+                                    <action selector="pushStatus:" destination="zhV-QJ-YlV" eventType="touchUpInside" id="VrQ-7J-0Kn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQQ-Wl-dDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="1410"/>
+            <point key="canvasLocation" x="889" y="1386"/>
         </scene>
         <!--ContactsTVC-->
         <scene sceneID="3Hp-mK-6Q2">
@@ -595,12 +625,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8m-pl-gdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="1410"/>
+            <point key="canvasLocation" x="611" y="1135"/>
         </scene>
     </scenes>
     <resources>
         <image name="发布.png" width="32" height="32"/>
         <image name="定位3.png" width="24" height="24"/>
+        <image name="导航.png" width="24" height="24"/>
         <image name="消息2.png" width="30" height="23"/>
         <image name="联系人.png" width="24" height="24"/>
         <image name="首页.png" width="26" height="23"/>

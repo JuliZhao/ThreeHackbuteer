@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailTF;
 
 - (IBAction)action4Register:(UIButton *)sender;
+- (IBAction)action4Back:(UIButton *)sender;
 @end
 
 @implementation RegisterVC
@@ -39,5 +40,9 @@
 */
 
 - (IBAction)action4Register:(UIButton *)sender {
+}
+
+- (IBAction)action4Back:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
