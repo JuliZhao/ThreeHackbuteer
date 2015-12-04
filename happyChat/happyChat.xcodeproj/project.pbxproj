@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		C232F10E1C111E4800A977AC /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232F10C1C111E4800A977AC /* FriendCell.m */; };
 		C232F10F1C111E4800A977AC /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C232F10D1C111E4800A977AC /* FriendCell.xib */; };
+		C232F1131C114CF200A977AC /* OtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232F1111C114CF200A977AC /* OtherCell.m */; };
+		C232F1141C114CF200A977AC /* OtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C232F1121C114CF200A977AC /* OtherCell.xib */; };
+		C232F1181C114D0600A977AC /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232F1161C114D0600A977AC /* MyCell.m */; };
+		C232F1191C114D0600A977AC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C232F1171C114D0600A977AC /* MyCell.xib */; };
+		C232F11C1C116E2800A977AC /* TabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C232F11B1C116E2800A977AC /* TabBarVC.m */; };
 		C2FFBB811C103370005CB45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBB801C103370005CB45C /* main.m */; };
 		C2FFBB8A1C103370005CB45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBB881C103370005CB45C /* Main.storyboard */; };
 		C2FFBB8C1C103370005CB45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBB8B1C103370005CB45C /* Assets.xcassets */; };
@@ -52,6 +57,14 @@
 		C232F10B1C111E4800A977AC /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		C232F10C1C111E4800A977AC /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		C232F10D1C111E4800A977AC /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		C232F1101C114CF200A977AC /* OtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherCell.h; sourceTree = "<group>"; };
+		C232F1111C114CF200A977AC /* OtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherCell.m; sourceTree = "<group>"; };
+		C232F1121C114CF200A977AC /* OtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherCell.xib; sourceTree = "<group>"; };
+		C232F1151C114D0600A977AC /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		C232F1161C114D0600A977AC /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		C232F1171C114D0600A977AC /* MyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		C232F11A1C116E2800A977AC /* TabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarVC.h; sourceTree = "<group>"; };
+		C232F11B1C116E2800A977AC /* TabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarVC.m; sourceTree = "<group>"; };
 		C2FFBB7C1C103370005CB45C /* happyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FFBB801C103370005CB45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2FFBB891C103370005CB45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -264,6 +277,8 @@
 				C2FFBBC81C108018005CB45C /* ChatDetailTVC.m */,
 				C2FFBBCA1C1080C3005CB45C /* HomeTVC.h */,
 				C2FFBBCB1C1080C3005CB45C /* HomeTVC.m */,
+				C232F11A1C116E2800A977AC /* TabBarVC.h */,
+				C232F11B1C116E2800A977AC /* TabBarVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -274,6 +289,12 @@
 				C232F10B1C111E4800A977AC /* FriendCell.h */,
 				C232F10C1C111E4800A977AC /* FriendCell.m */,
 				C232F10D1C111E4800A977AC /* FriendCell.xib */,
+				C232F1101C114CF200A977AC /* OtherCell.h */,
+				C232F1111C114CF200A977AC /* OtherCell.m */,
+				C232F1121C114CF200A977AC /* OtherCell.xib */,
+				C232F1151C114D0600A977AC /* MyCell.h */,
+				C232F1161C114D0600A977AC /* MyCell.m */,
+				C232F1171C114D0600A977AC /* MyCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,10 +371,12 @@
 				C2FFBBE81C108161005CB45C /* 消息.png in Resources */,
 				C2FFBBE21C108161005CB45C /* 加号.png in Resources */,
 				C2FFBBEC1C108378005CB45C /* 发布.png in Resources */,
+				C232F1191C114D0600A977AC /* MyCell.xib in Resources */,
 				C2FFBB8F1C103370005CB45C /* LaunchScreen.storyboard in Resources */,
 				C2FFBBDD1C108161005CB45C /* 定位1.png in Resources */,
 				C2FFBB8C1C103370005CB45C /* Assets.xcassets in Resources */,
 				C2FFBBE01C108161005CB45C /* 返回.png in Resources */,
+				C232F1141C114CF200A977AC /* OtherCell.xib in Resources */,
 				C2FFBBE41C108161005CB45C /* 联系人1.png in Resources */,
 				C2FFBBDE1C108161005CB45C /* 定位2.png in Resources */,
 				C2FFBB8A1C103370005CB45C /* Main.storyboard in Resources */,
@@ -426,9 +449,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FFBBC31C107FD4005CB45C /* ContactsTVC.m in Sources */,
+				C232F1131C114CF200A977AC /* OtherCell.m in Sources */,
 				C2FFBBB41C107EFD005CB45C /* RootVC.m in Sources */,
 				C2FFBBCC1C1080C3005CB45C /* HomeTVC.m in Sources */,
+				C232F11C1C116E2800A977AC /* TabBarVC.m in Sources */,
 				C2FFBBAC1C103479005CB45C /* AppDelegate.m in Sources */,
+				C232F1181C114D0600A977AC /* MyCell.m in Sources */,
 				C2FFBBBD1C107F7D005CB45C /* LoginVC.m in Sources */,
 				C2FFBBC01C107F98005CB45C /* RegisterVC.m in Sources */,
 				C2FFBBAD1C103479005CB45C /* LeanCloudDBHelper.m in Sources */,
