@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C232F10E1C111E4800A977AC /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232F10C1C111E4800A977AC /* FriendCell.m */; };
+		C232F10F1C111E4800A977AC /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C232F10D1C111E4800A977AC /* FriendCell.xib */; };
+		C2FFBB811C103370005CB45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBB801C103370005CB45C /* main.m */; };
+		C2FFBB8A1C103370005CB45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBB881C103370005CB45C /* Main.storyboard */; };
+		C2FFBB8C1C103370005CB45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBB8B1C103370005CB45C /* Assets.xcassets */; };
+		C2FFBB8F1C103370005CB45C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBB8D1C103370005CB45C /* LaunchScreen.storyboard */; };
+		C2FFBBAC1C103479005CB45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBB981C103479005CB45C /* AppDelegate.m */; };
+		C2FFBBAD1C103479005CB45C /* LeanCloudDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBB9C1C103479005CB45C /* LeanCloudDBHelper.m */; };
+		C2FFBBAE1C103479005CB45C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBA11C103479005CB45C /* Comment.m */; };
+		C2FFBBAF1C103479005CB45C /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBA31C103479005CB45C /* Status.m */; };
+		C2FFBBB01C103479005CB45C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBA51C103479005CB45C /* User.m */; };
+		C2FFBBB41C107EFD005CB45C /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBB31C107EFD005CB45C /* RootVC.m */; };
+		C2FFBBB71C107F45005CB45C /* PushVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBB61C107F45005CB45C /* PushVC.m */; };
+		C2FFBBBA1C107F5A005CB45C /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBB91C107F5A005CB45C /* SearchVC.m */; };
+		C2FFBBBD1C107F7D005CB45C /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBBC1C107F7D005CB45C /* LoginVC.m */; };
+		C2FFBBC01C107F98005CB45C /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBBF1C107F98005CB45C /* RegisterVC.m */; };
+		C2FFBBC31C107FD4005CB45C /* ContactsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBC21C107FD4005CB45C /* ContactsTVC.m */; };
+		C2FFBBC61C107FED005CB45C /* ChatTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBC51C107FED005CB45C /* ChatTVC.m */; };
+		C2FFBBC91C108018005CB45C /* ChatDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBC81C108018005CB45C /* ChatDetailTVC.m */; };
+		C2FFBBCC1C1080C3005CB45C /* HomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBBCB1C1080C3005CB45C /* HomeTVC.m */; };
+		C2FFBBDC1C108161005CB45C /* 导航.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBCD1C108161005CB45C /* 导航.png */; };
+		C2FFBBDD1C108161005CB45C /* 定位1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBCE1C108161005CB45C /* 定位1.png */; };
+		C2FFBBDE1C108161005CB45C /* 定位2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBCF1C108161005CB45C /* 定位2.png */; };
+		C2FFBBDF1C108161005CB45C /* 定位3.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD01C108161005CB45C /* 定位3.png */; };
+		C2FFBBE01C108161005CB45C /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD11C108161005CB45C /* 返回.png */; };
+		C2FFBBE11C108161005CB45C /* 分享24.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD21C108161005CB45C /* 分享24.png */; };
+		C2FFBBE21C108161005CB45C /* 加号.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD31C108161005CB45C /* 加号.png */; };
+		C2FFBBE31C108161005CB45C /* 联系人.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD41C108161005CB45C /* 联系人.png */; };
+		C2FFBBE41C108161005CB45C /* 联系人1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD51C108161005CB45C /* 联系人1.png */; };
+		C2FFBBE51C108161005CB45C /* 气泡1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD61C108161005CB45C /* 气泡1.png */; };
+		C2FFBBE61C108161005CB45C /* 气泡2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD71C108161005CB45C /* 气泡2.png */; };
+		C2FFBBE71C108161005CB45C /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD81C108161005CB45C /* 首页.png */; };
+		C2FFBBE81C108161005CB45C /* 消息.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBD91C108161005CB45C /* 消息.png */; };
+		C2FFBBE91C108161005CB45C /* 消息1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBDA1C108161005CB45C /* 消息1.png */; };
+		C2FFBBEA1C108161005CB45C /* 消息2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBDB1C108161005CB45C /* 消息2.png */; };
+		C2FFBBEC1C108378005CB45C /* 发布.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FFBBEB1C108378005CB45C /* 发布.png */; };
+		EAD1F0D0A04692CE443C32BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD4E1354F0C8596F476F740 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D3ADE358EA8E8C9D2F44E2B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ABD4E1354F0C8596F476F740 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C232F10B1C111E4800A977AC /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		C232F10C1C111E4800A977AC /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		C232F10D1C111E4800A977AC /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		C2FFBB7C1C103370005CB45C /* happyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2FFBB801C103370005CB45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2FFBB891C103370005CB45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2FFBB8B1C103370005CB45C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2FFBB8E1C103370005CB45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2FFBB901C103370005CB45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FFBB971C103479005CB45C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C2FFBB981C103479005CB45C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2FFBB991C103479005CB45C /* HC_pch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HC_pch.pch; sourceTree = "<group>"; };
+		C2FFBB9B1C103479005CB45C /* LeanCloudDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanCloudDBHelper.h; sourceTree = "<group>"; };
+		C2FFBB9C1C103479005CB45C /* LeanCloudDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanCloudDBHelper.m; sourceTree = "<group>"; };
+		C2FFBB9E1C103479005CB45C /* HappyChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyChat.h; sourceTree = "<group>"; };
+		C2FFBBA01C103479005CB45C /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		C2FFBBA11C103479005CB45C /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		C2FFBBA21C103479005CB45C /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		C2FFBBA31C103479005CB45C /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		C2FFBBA41C103479005CB45C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		C2FFBBA51C103479005CB45C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		C2FFBBB21C107EFD005CB45C /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
+		C2FFBBB31C107EFD005CB45C /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
+		C2FFBBB51C107F45005CB45C /* PushVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushVC.h; sourceTree = "<group>"; };
+		C2FFBBB61C107F45005CB45C /* PushVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushVC.m; sourceTree = "<group>"; };
+		C2FFBBB81C107F5A005CB45C /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		C2FFBBB91C107F5A005CB45C /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		C2FFBBBB1C107F7D005CB45C /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		C2FFBBBC1C107F7D005CB45C /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		C2FFBBBE1C107F98005CB45C /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		C2FFBBBF1C107F98005CB45C /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		C2FFBBC11C107FD4005CB45C /* ContactsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTVC.h; sourceTree = "<group>"; };
+		C2FFBBC21C107FD4005CB45C /* ContactsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTVC.m; sourceTree = "<group>"; };
+		C2FFBBC41C107FED005CB45C /* ChatTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTVC.h; sourceTree = "<group>"; };
+		C2FFBBC51C107FED005CB45C /* ChatTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTVC.m; sourceTree = "<group>"; };
+		C2FFBBC71C108018005CB45C /* ChatDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetailTVC.h; sourceTree = "<group>"; };
+		C2FFBBC81C108018005CB45C /* ChatDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetailTVC.m; sourceTree = "<group>"; };
+		C2FFBBCA1C1080C3005CB45C /* HomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTVC.h; sourceTree = "<group>"; };
+		C2FFBBCB1C1080C3005CB45C /* HomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTVC.m; sourceTree = "<group>"; };
+		C2FFBBCD1C108161005CB45C /* 导航.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航.png"; sourceTree = "<group>"; };
+		C2FFBBCE1C108161005CB45C /* 定位1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位1.png"; sourceTree = "<group>"; };
+		C2FFBBCF1C108161005CB45C /* 定位2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位2.png"; sourceTree = "<group>"; };
+		C2FFBBD01C108161005CB45C /* 定位3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位3.png"; sourceTree = "<group>"; };
+		C2FFBBD11C108161005CB45C /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
+		C2FFBBD21C108161005CB45C /* 分享24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享24.png"; sourceTree = "<group>"; };
+		C2FFBBD31C108161005CB45C /* 加号.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加号.png"; sourceTree = "<group>"; };
+		C2FFBBD41C108161005CB45C /* 联系人.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联系人.png"; sourceTree = "<group>"; };
+		C2FFBBD51C108161005CB45C /* 联系人1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联系人1.png"; sourceTree = "<group>"; };
+		C2FFBBD61C108161005CB45C /* 气泡1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "气泡1.png"; sourceTree = "<group>"; };
+		C2FFBBD71C108161005CB45C /* 气泡2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "气泡2.png"; sourceTree = "<group>"; };
+		C2FFBBD81C108161005CB45C /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
+		C2FFBBD91C108161005CB45C /* 消息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息.png"; sourceTree = "<group>"; };
+		C2FFBBDA1C108161005CB45C /* 消息1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息1.png"; sourceTree = "<group>"; };
+		C2FFBBDB1C108161005CB45C /* 消息2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息2.png"; sourceTree = "<group>"; };
+		C2FFBBEB1C108378005CB45C /* 发布.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发布.png"; sourceTree = "<group>"; };
+		DF6D2B66F60E04E7DF0D013F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2FFBB791C103370005CB45C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD1F0D0A04692CE443C32BE /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EA4B1079296FBBBE43096AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABD4E1354F0C8596F476F740 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2FFBB731C103370005CB45C = {
+			isa = PBXGroup;
+			children = (
+				C2FFBB7E1C103370005CB45C /* happyChat */,
+				C2FFBB7D1C103370005CB45C /* Products */,
+				F9C8ECF5C03AE44B9D9EED50 /* Pods */,
+				3EA4B1079296FBBBE43096AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2FFBB7D1C103370005CB45C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBB7C1C103370005CB45C /* happyChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2FFBB7E1C103370005CB45C /* happyChat */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBB961C103479005CB45C /* AppDelegate */,
+				C2FFBB9A1C103479005CB45C /* Helpers */,
+				C2FFBB9D1C103479005CB45C /* Macro */,
+				C2FFBB9F1C103479005CB45C /* Models */,
+				C2FFBBA61C103479005CB45C /* Resources */,
+				C2FFBBA71C103479005CB45C /* Scenes */,
+				C2FFBB881C103370005CB45C /* Main.storyboard */,
+				C2FFBB8B1C103370005CB45C /* Assets.xcassets */,
+				C2FFBB8D1C103370005CB45C /* LaunchScreen.storyboard */,
+				C2FFBB901C103370005CB45C /* Info.plist */,
+				C2FFBB7F1C103370005CB45C /* Supporting Files */,
+			);
+			path = happyChat;
+			sourceTree = "<group>";
+		};
+		C2FFBB7F1C103370005CB45C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBB991C103479005CB45C /* HC_pch.pch */,
+				C2FFBB801C103370005CB45C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2FFBB961C103479005CB45C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBB971C103479005CB45C /* AppDelegate.h */,
+				C2FFBB981C103479005CB45C /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C2FFBB9A1C103479005CB45C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBB9B1C103479005CB45C /* LeanCloudDBHelper.h */,
+				C2FFBB9C1C103479005CB45C /* LeanCloudDBHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C2FFBB9D1C103479005CB45C /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBB9E1C103479005CB45C /* HappyChat.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		C2FFBB9F1C103479005CB45C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBBA01C103479005CB45C /* Comment.h */,
+				C2FFBBA11C103479005CB45C /* Comment.m */,
+				C2FFBBA21C103479005CB45C /* Status.h */,
+				C2FFBBA31C103479005CB45C /* Status.m */,
+				C2FFBBA41C103479005CB45C /* User.h */,
+				C2FFBBA51C103479005CB45C /* User.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C2FFBBA61C103479005CB45C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBBCD1C108161005CB45C /* 导航.png */,
+				C2FFBBCE1C108161005CB45C /* 定位1.png */,
+				C2FFBBCF1C108161005CB45C /* 定位2.png */,
+				C2FFBBD01C108161005CB45C /* 定位3.png */,
+				C2FFBBD11C108161005CB45C /* 返回.png */,
+				C2FFBBD21C108161005CB45C /* 分享24.png */,
+				C2FFBBEB1C108378005CB45C /* 发布.png */,
+				C2FFBBD31C108161005CB45C /* 加号.png */,
+				C2FFBBD41C108161005CB45C /* 联系人.png */,
+				C2FFBBD51C108161005CB45C /* 联系人1.png */,
+				C2FFBBD61C108161005CB45C /* 气泡1.png */,
+				C2FFBBD71C108161005CB45C /* 气泡2.png */,
+				C2FFBBD81C108161005CB45C /* 首页.png */,
+				C2FFBBD91C108161005CB45C /* 消息.png */,
+				C2FFBBDA1C108161005CB45C /* 消息1.png */,
+				C2FFBBDB1C108161005CB45C /* 消息2.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2FFBBA71C103479005CB45C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBBA81C103479005CB45C /* ViewControllers */,
+				C2FFBBAB1C103479005CB45C /* Views */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C2FFBBA81C103479005CB45C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFBBB21C107EFD005CB45C /* RootVC.h */,
+				C2FFBBB31C107EFD005CB45C /* RootVC.m */,
+				C2FFBBB51C107F45005CB45C /* PushVC.h */,
+				C2FFBBB61C107F45005CB45C /* PushVC.m */,
+				C2FFBBB81C107F5A005CB45C /* SearchVC.h */,
+				C2FFBBB91C107F5A005CB45C /* SearchVC.m */,
+				C2FFBBBB1C107F7D005CB45C /* LoginVC.h */,
+				C2FFBBBC1C107F7D005CB45C /* LoginVC.m */,
+				C2FFBBBE1C107F98005CB45C /* RegisterVC.h */,
+				C2FFBBBF1C107F98005CB45C /* RegisterVC.m */,
+				C2FFBBC11C107FD4005CB45C /* ContactsTVC.h */,
+				C2FFBBC21C107FD4005CB45C /* ContactsTVC.m */,
+				C2FFBBC41C107FED005CB45C /* ChatTVC.h */,
+				C2FFBBC51C107FED005CB45C /* ChatTVC.m */,
+				C2FFBBC71C108018005CB45C /* ChatDetailTVC.h */,
+				C2FFBBC81C108018005CB45C /* ChatDetailTVC.m */,
+				C2FFBBCA1C1080C3005CB45C /* HomeTVC.h */,
+				C2FFBBCB1C1080C3005CB45C /* HomeTVC.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C2FFBBAB1C103479005CB45C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C232F10B1C111E4800A977AC /* FriendCell.h */,
+				C232F10C1C111E4800A977AC /* FriendCell.m */,
+				C232F10D1C111E4800A977AC /* FriendCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9C8ECF5C03AE44B9D9EED50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D3ADE358EA8E8C9D2F44E2B /* Pods.debug.xcconfig */,
+				DF6D2B66F60E04E7DF0D013F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2FFBB7B1C103370005CB45C /* happyChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2FFBB931C103370005CB45C /* Build configuration list for PBXNativeTarget "happyChat" */;
+			buildPhases = (
+				E891DBDEF673D34277378AD9 /* Check Pods Manifest.lock */,
+				C2FFBB781C103370005CB45C /* Sources */,
+				C2FFBB791C103370005CB45C /* Frameworks */,
+				C2FFBB7A1C103370005CB45C /* Resources */,
+				11A5B85E99383A4AE14BC173 /* Embed Pods Frameworks */,
+				B4396E203C3597BE0E2CFFBC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = happyChat;
+			productName = happyChat;
+			productReference = C2FFBB7C1C103370005CB45C /* happyChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2FFBB741C103370005CB45C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = zy;
+				TargetAttributes = {
+					C2FFBB7B1C103370005CB45C = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = C2FFBB771C103370005CB45C /* Build configuration list for PBXProject "happyChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2FFBB731C103370005CB45C;
+			productRefGroup = C2FFBB7D1C103370005CB45C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2FFBB7B1C103370005CB45C /* happyChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2FFBB7A1C103370005CB45C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FFBBE81C108161005CB45C /* 消息.png in Resources */,
+				C2FFBBE21C108161005CB45C /* 加号.png in Resources */,
+				C2FFBBEC1C108378005CB45C /* 发布.png in Resources */,
+				C2FFBB8F1C103370005CB45C /* LaunchScreen.storyboard in Resources */,
+				C2FFBBDD1C108161005CB45C /* 定位1.png in Resources */,
+				C2FFBB8C1C103370005CB45C /* Assets.xcassets in Resources */,
+				C2FFBBE01C108161005CB45C /* 返回.png in Resources */,
+				C2FFBBE41C108161005CB45C /* 联系人1.png in Resources */,
+				C2FFBBDE1C108161005CB45C /* 定位2.png in Resources */,
+				C2FFBB8A1C103370005CB45C /* Main.storyboard in Resources */,
+				C2FFBBDC1C108161005CB45C /* 导航.png in Resources */,
+				C2FFBBE61C108161005CB45C /* 气泡2.png in Resources */,
+				C2FFBBE91C108161005CB45C /* 消息1.png in Resources */,
+				C2FFBBE71C108161005CB45C /* 首页.png in Resources */,
+				C2FFBBDF1C108161005CB45C /* 定位3.png in Resources */,
+				C232F10F1C111E4800A977AC /* FriendCell.xib in Resources */,
+				C2FFBBE11C108161005CB45C /* 分享24.png in Resources */,
+				C2FFBBEA1C108161005CB45C /* 消息2.png in Resources */,
+				C2FFBBE51C108161005CB45C /* 气泡1.png in Resources */,
+				C2FFBBE31C108161005CB45C /* 联系人.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11A5B85E99383A4AE14BC173 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4396E203C3597BE0E2CFFBC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E891DBDEF673D34277378AD9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2FFBB781C103370005CB45C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FFBBC31C107FD4005CB45C /* ContactsTVC.m in Sources */,
+				C2FFBBB41C107EFD005CB45C /* RootVC.m in Sources */,
+				C2FFBBCC1C1080C3005CB45C /* HomeTVC.m in Sources */,
+				C2FFBBAC1C103479005CB45C /* AppDelegate.m in Sources */,
+				C2FFBBBD1C107F7D005CB45C /* LoginVC.m in Sources */,
+				C2FFBBC01C107F98005CB45C /* RegisterVC.m in Sources */,
+				C2FFBBAD1C103479005CB45C /* LeanCloudDBHelper.m in Sources */,
+				C2FFBBC61C107FED005CB45C /* ChatTVC.m in Sources */,
+				C2FFBBB01C103479005CB45C /* User.m in Sources */,
+				C2FFBBC91C108018005CB45C /* ChatDetailTVC.m in Sources */,
+				C2FFBBBA1C107F5A005CB45C /* SearchVC.m in Sources */,
+				C2FFBBB71C107F45005CB45C /* PushVC.m in Sources */,
+				C2FFBB811C103370005CB45C /* main.m in Sources */,
+				C2FFBBAF1C103479005CB45C /* Status.m in Sources */,
+				C2FFBBAE1C103479005CB45C /* Comment.m in Sources */,
+				C232F10E1C111E4800A977AC /* FriendCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C2FFBB881C103370005CB45C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2FFBB891C103370005CB45C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C2FFBB8D1C103370005CB45C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2FFBB8E1C103370005CB45C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2FFBB911C103370005CB45C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2FFBB921C103370005CB45C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2FFBB941C103370005CB45C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D3ADE358EA8E8C9D2F44E2B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = happyChat/HC_pch.pch;
+				INFOPLIST_FILE = happyChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.happyChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C2FFBB951C103370005CB45C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6D2B66F60E04E7DF0D013F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = happyChat/HC_pch.pch;
+				INFOPLIST_FILE = happyChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.happyChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2FFBB771C103370005CB45C /* Build configuration list for PBXProject "happyChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2FFBB911C103370005CB45C /* Debug */,
+				C2FFBB921C103370005CB45C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2FFBB931C103370005CB45C /* Build configuration list for PBXNativeTarget "happyChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2FFBB941C103370005CB45C /* Debug */,
+				C2FFBB951C103370005CB45C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2FFBB741C103370005CB45C /* Project object */;
+}
