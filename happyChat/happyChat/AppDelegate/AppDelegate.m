@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MZGuidePages.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +18,64 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //判断首次使用
+#pragma mark - 开启APP轮播图
+    
+    // 一定要写上这一句话，下面所有的代码，只有这句话执行以后才能执行，如果没有这句话，下面代码都不能执行
+    [self.window makeKeyAndVisible];
+    
+    // 只运行一次
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *launched = [userDefaults objectForKey:@"launched"];
+    if (!launched)
+    {
+        [self guidePages];
+        launched = @"YES";
+        [userDefaults setObject:launched forKey:@"launched"];
+        [userDefaults synchronize];
+    }
+
+    
+    
     
     [AVOSCloud setApplicationId:@"k4flaFf8bNdOP72nlFJ4oYE3"
                       clientKey:@"0T8IkpyXB17NIvcjkVBov41o"];
     
     return YES;
 }
+
+- (void)guidePages
+{
+    //  数据源
+    NSArray *imageArray = @[ @"1.jpg", @"2.jpg", @"3.jpg", @"4.jpeg"];
+    
+    // 初始化方法1
+    MZGuidePages *mzgpc = [[MZGuidePages alloc] init];
+    mzgpc.imageDatas = imageArray;
+    __weak typeof(MZGuidePages) *weakMZ = mzgpc;
+    mzgpc.buttonAction = ^{
+        [UIView animateWithDuration:2.0f
+                         animations:^{
+                             weakMZ.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished) {
+                             [weakMZ removeFromSuperview];
+                         }];
+    };
+    
+    //  初始化方法2
+    //    MZGuidePagesController *mzgpc = [[MZGuidePagesController alloc]
+    //    initWithImageDatas:imageArray
+    //                                                                            completion:^{
+    //                                                                              NSLog(@"click!");
+    //
+    
+    // 要在makeKeyAndVisible之后调用才有效
+    [self.window addSubview:mzgpc];
+}
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

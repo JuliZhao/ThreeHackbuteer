@@ -38,8 +38,24 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+//注册
 - (IBAction)action4Register:(UIButton *)sender {
+    AVUser *user = [AVUser user];
+    user.username = _nameTF.text;
+    user.password =  _pswTF.text;
+    user.email = _emailTF.text;
+//    user.mobilePhoneNumber = _phoneNumberText.text;
+    
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"注册成功");
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            NSLog(@"注册失败:%@",error);
+        }
+    }];
+    
 }
 
 - (IBAction)action4Back:(UIButton *)sender {

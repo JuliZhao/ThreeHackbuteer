@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C997B4C1C113BC3000D7125 /* MZGuidePages.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C997B4B1C113BC3000D7125 /* MZGuidePages.m */; settings = {ASSET_TAGS = (); }; };
+		1C997B511C113D26000D7125 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C997B4D1C113D26000D7125 /* 1.jpg */; settings = {ASSET_TAGS = (); }; };
+		1C997B521C113D26000D7125 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C997B4E1C113D26000D7125 /* 2.jpg */; settings = {ASSET_TAGS = (); }; };
+		1C997B531C113D26000D7125 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C997B4F1C113D26000D7125 /* 3.jpg */; settings = {ASSET_TAGS = (); }; };
+		1C997B541C113D26000D7125 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C997B501C113D26000D7125 /* 4.jpg */; settings = {ASSET_TAGS = (); }; };
 		C232F10E1C111E4800A977AC /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C232F10C1C111E4800A977AC /* FriendCell.m */; };
 		C232F10F1C111E4800A977AC /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C232F10D1C111E4800A977AC /* FriendCell.xib */; };
 		C2FFBB811C103370005CB45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFBB801C103370005CB45C /* main.m */; };
@@ -47,6 +52,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C997B4A1C113BC3000D7125 /* MZGuidePages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZGuidePages.h; sourceTree = "<group>"; };
+		1C997B4B1C113BC3000D7125 /* MZGuidePages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZGuidePages.m; sourceTree = "<group>"; };
+		1C997B4D1C113D26000D7125 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		1C997B4E1C113D26000D7125 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		1C997B4F1C113D26000D7125 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		1C997B501C113D26000D7125 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		1D3ADE358EA8E8C9D2F44E2B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ABD4E1354F0C8596F476F740 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C232F10B1C111E4800A977AC /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
@@ -177,6 +188,12 @@
 			children = (
 				C2FFBB971C103479005CB45C /* AppDelegate.h */,
 				C2FFBB981C103479005CB45C /* AppDelegate.m */,
+				1C997B4A1C113BC3000D7125 /* MZGuidePages.h */,
+				1C997B4B1C113BC3000D7125 /* MZGuidePages.m */,
+				1C997B4D1C113D26000D7125 /* 1.jpg */,
+				1C997B4E1C113D26000D7125 /* 2.jpg */,
+				1C997B4F1C113D26000D7125 /* 3.jpg */,
+				1C997B501C113D26000D7125 /* 4.jpg */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -347,12 +364,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C997B541C113D26000D7125 /* 4.jpg in Resources */,
+				1C997B521C113D26000D7125 /* 2.jpg in Resources */,
 				C2FFBBE81C108161005CB45C /* 消息.png in Resources */,
 				C2FFBBE21C108161005CB45C /* 加号.png in Resources */,
 				C2FFBBEC1C108378005CB45C /* 发布.png in Resources */,
 				C2FFBB8F1C103370005CB45C /* LaunchScreen.storyboard in Resources */,
+				1C997B531C113D26000D7125 /* 3.jpg in Resources */,
 				C2FFBBDD1C108161005CB45C /* 定位1.png in Resources */,
 				C2FFBB8C1C103370005CB45C /* Assets.xcassets in Resources */,
+				1C997B511C113D26000D7125 /* 1.jpg in Resources */,
 				C2FFBBE01C108161005CB45C /* 返回.png in Resources */,
 				C2FFBBE41C108161005CB45C /* 联系人1.png in Resources */,
 				C2FFBBDE1C108161005CB45C /* 定位2.png in Resources */,
@@ -437,6 +458,7 @@
 				C2FFBBC91C108018005CB45C /* ChatDetailTVC.m in Sources */,
 				C2FFBBBA1C107F5A005CB45C /* SearchVC.m in Sources */,
 				C2FFBBB71C107F45005CB45C /* PushVC.m in Sources */,
+				1C997B4C1C113BC3000D7125 /* MZGuidePages.m in Sources */,
 				C2FFBB811C103370005CB45C /* main.m in Sources */,
 				C2FFBBAF1C103479005CB45C /* Status.m in Sources */,
 				C2FFBBAE1C103479005CB45C /* Comment.m in Sources */,
@@ -553,6 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = happyChat/HC_pch.pch;
 				INFOPLIST_FILE = happyChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zy.happyChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -566,6 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = happyChat/HC_pch.pch;
 				INFOPLIST_FILE = happyChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zy.happyChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
