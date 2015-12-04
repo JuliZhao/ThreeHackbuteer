@@ -7,6 +7,7 @@
 //
 
 #import "TabBarVC.h"
+#import "HomeTVC.h"
 
 @interface TabBarVC ()
 
@@ -14,9 +15,19 @@
 
 @implementation TabBarVC
 
+static TabBarVC *tabVC = nil;
++(instancetype)sharedTabBarVC{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        tabVC = [sb instantiateViewControllerWithIdentifier:@"tabBar"];
+    });
+    return tabVC;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {

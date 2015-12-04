@@ -7,7 +7,7 @@
 //
 
 #import "LoginVC.h"
-#import "HomeTVC.h"
+#import "TabBarVC.h"
 
 @interface LoginVC ()
 @property (strong, nonatomic) IBOutlet UITextField *userNameTF;
@@ -42,8 +42,8 @@
     [AVUser logInWithUsernameInBackground:_userNameTF.text password:_userPswTF.text block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             NSLog(@"登陆成功");
-            HomeTVC *homeTV = [[HomeTVC alloc]init];
-            [self.navigationController pushViewController:homeTV animated:YES];
+            TabBarVC *tabVC = [TabBarVC sharedTabBarVC];
+            [self showDetailViewController:tabVC sender:nil];
         } else {
             NSLog(@"登录失败:%@",error);
         }

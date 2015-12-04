@@ -10,4 +10,6 @@
 
 @interface TabBarVC : UITabBarController
 
++(instancetype)sharedTabBarVC;
+
 @end
