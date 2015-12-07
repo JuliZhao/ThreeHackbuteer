@@ -2,11 +2,12 @@
 //  ContactsTVC.m
 //  happyChat
 //
-//  Created by lanou3g on 15/12/3.
+//  Created by zy on 15/12/3.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
 #import "ContactsTVC.h"
+#import "FriendCell.h"
 
 @interface ContactsTVC ()
 @property (strong, nonatomic) IBOutlet UIImageView *backImgView;
@@ -22,11 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:[UINib nibWithNibName:@"FriendCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"friendCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,24 +34,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 1;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"friendCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    cell.textLab.text = @"hahah";
+
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

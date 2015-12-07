@@ -2,13 +2,17 @@
 //  HomeTVC.m
 //  happyChat
 //
-//  Created by lanou3g on 15/12/3.
+//  Created by zy on 15/12/3.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
 #import "HomeTVC.h"
+#import "PushCell.h"
 
 @interface HomeTVC ()
+
+@property (nonatomic, retain) NSData *binaryData;
+
 
 @end
 
@@ -17,16 +21,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:[UINib nibWithNibName:@"PushCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"pushCell"];
+}
+
+-(void) readStatus{
+    [LeanCloudDBHelper findAllWithClassName:@"chatContent" HasArrayKey:nil Return:^(id result) {
+        if (result) {
+            for (AVObject *objc in result) {
+                // 读取文字
+                AVFile *attachment = [objc objectForKey:@"attached"];
+                self.binaryData = [attachment getData];
+                // 读取图片
+                AVFile *attachment2 = [objc objectForKey:@"attached"];
+                NSData *imageData = [attachment2 getData];
+                UIImage *image = [[UIImage alloc]initWithData:imageData];
+                //                Status *status = [Status new];
+                //                [self.dataArray addObject:status];
+            }
+        }
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 #pragma mark - Table view data source
@@ -41,15 +60,15 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    PushCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pushCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

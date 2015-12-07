@@ -14,5 +14,7 @@
 
 #import "HappyChat.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "AVOSCloudIM.h"
+#import "LeanCloudDBHelper.h"
 
 #endif /* HC_pch_pch */

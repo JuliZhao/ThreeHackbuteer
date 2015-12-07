@@ -2,11 +2,12 @@
 //  ChatTVC.m
 //  happyChat
 //
-//  Created by lanou3g on 15/12/3.
+//  Created by zy on 15/12/3.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
 #import "ChatTVC.h"
+#import "ChatDetailTVC.h"
 
 @interface ChatTVC ()
 
@@ -17,11 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,23 +30,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = @"你好";
     
     return cell;
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ChatDetailTVC *chat = [[ChatDetailTVC alloc]init];
+    chat.targetClientId = @"222";
+    [self.navigationController pushViewController:chat animated:YES];
+}
+
 
 /*
 // Override to support conditional editing of the table view.

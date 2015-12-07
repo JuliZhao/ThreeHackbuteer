@@ -2,7 +2,7 @@
 //  RegisterVC.m
 //  happyChat
 //
-//  Created by lanou3g on 15/12/3.
+//  Created by zy on 15/12/3.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
@@ -44,8 +44,6 @@
     user.username = _nameTF.text;
     user.password =  _pswTF.text;
     user.email = _emailTF.text;
-//    user.mobilePhoneNumber = _phoneNumberText.text;
-    
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {

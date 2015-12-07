@@ -47,7 +47,7 @@
 - (void)guidePages
 {
     //  数据源
-    NSArray *imageArray = @[ @"1.jpg", @"2.jpg", @"3.jpg", @"4.jpeg"];
+    NSArray *imageArray = @[ @"1.jpg", @"2.jpg", @"3.jpg", @"4.jpg"];
     
     // 初始化方法1
     MZGuidePages *mzgpc = [[MZGuidePages alloc] init];

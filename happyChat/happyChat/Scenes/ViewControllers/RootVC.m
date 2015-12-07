@@ -2,13 +2,21 @@
 //  RootVC.m
 //  happyChat
 //
-//  Created by lanou3g on 15/12/3.
+//  Created by zy on 15/12/3.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
 #import "RootVC.h"
+#import "TabBarVC.h"
 
 @interface RootVC ()
+@property (strong, nonatomic) IBOutlet UIImageView *userImg;
+@property (strong, nonatomic) IBOutlet UILabel *welcomeLab;
+@property (strong, nonatomic) IBOutlet UIButton *hangBtn;
+@property (strong, nonatomic) IBOutlet UIButton *registerBtn;
+@property (strong, nonatomic) IBOutlet UIButton *loginBtn;
+
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -16,7 +24,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // 判断是否有用户登录
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+        // 允许用户使用应用
+        self.hangBtn.hidden = YES;
+        self.loginBtn.hidden = YES;
+        self.registerBtn.hidden = YES;
+        // 延迟一秒执行
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            TabBarVC *tabVC = [TabBarVC sharedTabBarVC];
+            [self showDetailViewController:tabVC sender:nil];
+        });
+    } else {
+        //缓存用户对象为空时，可打开用户注册界面…
+        self.welcomeLab.hidden = YES;
+        self.userImg.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

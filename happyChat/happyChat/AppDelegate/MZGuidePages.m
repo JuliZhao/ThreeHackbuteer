@@ -98,7 +98,7 @@
                     CGRectMake(SCREEN_WIDTH / 2 - 70, SCREEN_HEIGHT - 70, 140, 35);
                 _actionButton.layer.cornerRadius = 5;
                 _actionButton.layer.masksToBounds = YES;
-                [_actionButton setTitle:@"进  入" forState:UIControlStateNormal];
+                [_actionButton setTitle:@"前去体验" forState:UIControlStateNormal];
                 _actionButton.tintColor = [UIColor whiteColor];
                 _actionButton.backgroundColor = [UIColor redColor];
                 [_actionButton addTarget:self

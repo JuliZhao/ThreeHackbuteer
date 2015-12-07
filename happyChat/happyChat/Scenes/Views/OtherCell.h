@@ -2,7 +2,7 @@
 //  OtherCell.h
 //  happyChat
 //
-//  Created by lanou3g on 15/12/4.
+//  Created by zy on 15/12/4.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
@@ -11,5 +11,6 @@
 @interface OtherCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *contentLab;
 @property (strong, nonatomic) IBOutlet UIImageView *imgView;
+@property (nonatomic, strong) AVIMMessage *message;
 
 @end

@@ -2,27 +2,46 @@
 //  ChatDetailTVC.m
 //  happyChat
 //
-//  Created by lanou3g on 15/12/3.
+//  Created by zy on 15/12/3.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
 #import "ChatDetailTVC.h"
+#import "AVIMClient.h"
+#import "AVIMTextMessage.h"
+#import "AVIMConversation.h"
+#import "AVIMUserOptions.h"
+#import "AVIMConversationQuery.h"
 
-@interface ChatDetailTVC ()
+
+@interface ChatDetailTVC ()<AVIMClientDelegate>
+
+//用来记录聊天信息
+@property (nonatomic,strong) NSMutableArray * messages;
+//聊天客户端
+@property (nonatomic,strong) AVIMClient * client;
+
+//聊天对话
+@property (nonatomic,strong) AVIMConversation * converstaion;
+
+
 
 @end
 
 @implementation ChatDetailTVC
 
+-(void)setTargetClientId:(NSString *)targetClientId{
+    _targetClientId = targetClientId;
+}
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,24 +51,20 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.messages.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+  
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
