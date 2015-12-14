@@ -11,7 +11,7 @@
 @implementation MyCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    self.myImg.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -19,5 +19,10 @@
 
     // Configure the view for the selected state
 }
+
+//-(void)setMessage:(AVIMMessage *)message{
+//    self.message = message;
+//    self.myContent.text = message.content;
+//}
 
 @end

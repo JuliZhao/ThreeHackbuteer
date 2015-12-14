@@ -24,6 +24,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [[Helper sharedHelper] getImg];
+    _userImg.image = [UIImage imageNamed:[self getImg]];
+}
+
+-(NSString *)getImg{
+    int a = arc4random_uniform((int)6);
+    return [NSString stringWithFormat:@"%d", a+1];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     // 判断是否有用户登录
     AVUser *currentUser = [AVUser currentUser];
     if (currentUser != nil) {
@@ -31,6 +42,8 @@
         self.hangBtn.hidden = YES;
         self.loginBtn.hidden = YES;
         self.registerBtn.hidden = YES;
+        self.welcomeLab.hidden = NO;
+        self.userImg.hidden = NO;
         // 延迟一秒执行
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             TabBarVC *tabVC = [TabBarVC sharedTabBarVC];
@@ -38,6 +51,9 @@
         });
     } else {
         //缓存用户对象为空时，可打开用户注册界面…
+        self.hangBtn.hidden = NO;
+        self.loginBtn.hidden = NO;
+        self.registerBtn.hidden = NO;
         self.welcomeLab.hidden = YES;
         self.userImg.hidden = YES;
     }

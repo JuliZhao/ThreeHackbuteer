@@ -8,11 +8,29 @@
 
 #import "PushCell.h"
 #import "TabBarVC.h"
+#import "Status.h"
 
 @implementation PushCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.userImg.contentMode = UIViewContentModeScaleAspectFill;
+    self.imgView.contentMode = UIViewContentModeScaleAspectFit;
+}
+
+- (void)setStatus:(Status *)status {
+    _status = status;
+    // 发布内容
+    self.contentLab.text = status.content;
+    // 发布图片
+    self.imgView.image = status.picArray.lastObject;
+    // 发布人
+    self.userName.text = status.userName;
+    // 发布时间
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy年MM月dd日HH:mm"];
+    self.pushTimeLab.text = [formatter stringFromDate:status.pushTime];
+//    NSLog(@"=========%@   %@",status.pushTime, [status.pushTime class]);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -20,15 +38,16 @@
 
     // Configure the view for the selected state
 }
+
 - (IBAction)pushAction:(UIButton *)sender {
-    TabBarVC *tab = [TabBarVC sharedTabBarVC];
-    tab.selectedIndex = 2;
+    _myBlockStr(_status.content,_status.userName,_status.picArray.lastObject);
+
 }
 - (IBAction)commentAction:(UIButton *)sender {
     self.myBlock1();
 }
 - (IBAction)goodAction:(UIButton *)sender {
-    self.myBlock2();
+    [sender setImage:[UIImage imageNamed:@"已赞"] forState:(UIControlStateNormal)];
 }
 
 @end

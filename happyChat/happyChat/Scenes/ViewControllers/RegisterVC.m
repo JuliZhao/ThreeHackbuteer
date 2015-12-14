@@ -15,13 +15,14 @@
 
 - (IBAction)action4Register:(UIButton *)sender;
 - (IBAction)action4Back:(UIButton *)sender;
+- (IBAction)textSecureAction:(UIButton *)sender;
 @end
 
 @implementation RegisterVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _pswTF.secureTextEntry = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,7 +57,24 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.nameTF.text = nil;
+    self.emailTF.text = nil;
+    self.pswTF.text = nil;
+}
+
 - (IBAction)action4Back:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)textSecureAction:(UIButton *)sender {
+    if (_pswTF.secureTextEntry == NO) {
+        [sender setImage:[UIImage imageNamed:@"闭眼.png"] forState:UIControlStateNormal];
+        _pswTF.secureTextEntry = YES;
+    }else{
+        [sender setImage:[UIImage imageNamed:@"睁眼.png"] forState:UIControlStateNormal];
+        _pswTF.secureTextEntry = NO;
+    }
 }
 @end

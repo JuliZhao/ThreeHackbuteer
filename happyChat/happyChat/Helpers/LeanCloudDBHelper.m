@@ -42,6 +42,7 @@
 // 查询所有
 + (void)findAllWithClassName:(NSString *)className HasArrayKey:(NSString *)fileArrayKey Return:(ReturnObject)returnObject{
     AVQuery *query = [AVQuery queryWithClassName:className];
+    [query orderByDescending:@"createdAt"];
     if (fileArrayKey) {
         [query includeKey:fileArrayKey];
     }
@@ -75,7 +76,7 @@
         [query whereKey:conditionKey equalTo:conditionValue];
     }
     [query countObjectsInBackgroundWithBlock:^(NSInteger number, NSError *error) {
-        if (!error) returnObject([NSString stringWithFormat:@"%ld",number]);
+        if (!error) returnObject([NSString stringWithFormat:@"%ld",(long)number]);
         else returnObject(error);
     }];
 }

@@ -18,5 +18,12 @@
 @property (nonatomic, strong) NSString *content;
 // 评论人名字
 @property (nonatomic, strong) NSString *comName;
+// 评论人头像
+@property (nonatomic, strong) NSString *comImg;
+
+- (instancetype)initWithComName:(NSString *)comName
+                        content:(NSString *)content
+                       statusId:(NSString *)statusId
+                         comImg:(NSString *)comImg;
 
 @end

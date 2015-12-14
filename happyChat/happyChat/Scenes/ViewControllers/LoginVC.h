@@ -10,4 +10,6 @@
 
 @interface LoginVC : UIViewController
 
++(UINavigationController *)sharedLoginVC;
+
 @end

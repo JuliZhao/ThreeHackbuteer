@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *myContent;
 @property (strong, nonatomic) IBOutlet UIImageView *myImg;
 @property (nonatomic, strong) AVIMMessage *message;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *contentHeight;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *contentWidth;
 
 @end

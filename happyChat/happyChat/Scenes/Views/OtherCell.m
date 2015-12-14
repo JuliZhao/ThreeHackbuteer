@@ -11,9 +11,7 @@
 @implementation OtherCell
 
 - (void)awakeFromNib {
-    // Initialization code
-    self.imgView.layer.masksToBounds = YES;
-    self.imgView.layer.cornerRadius = 25;
+    self.imgView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -21,5 +19,10 @@
 
     // Configure the view for the selected state
 }
+
+//-(void)setMessage:(AVIMMessage *)message{
+//    self.message = message;
+//    self.contentLab.text = message.content;
+//}
 
 @end

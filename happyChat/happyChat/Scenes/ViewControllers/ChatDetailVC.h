@@ -2,7 +2,7 @@
 //  ChatDetailVC.h
 //  happyChat
 //
-//  Created by lanou3g on 15/12/6.
+//  Created by zy on 15/12/6.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
@@ -11,6 +11,8 @@
 
 @interface ChatDetailVC : UIViewController
 
-@property (nonatomic, strong) NSString *chater;
+@property (nonatomic, strong) AVUser *otherChater;
+//聊天对话
+@property (nonatomic,strong) AVIMConversation * converstaion;
 
 @end

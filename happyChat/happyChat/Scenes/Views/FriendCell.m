@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.imgView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

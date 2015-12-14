@@ -14,4 +14,17 @@
     
 }
 
+- (instancetype)initWithComName:(NSString *)comName
+                        content:(NSString *)content
+                       statusId:(NSString *)statusId
+                         comImg:(NSString *)comImg {
+    if ([super init]) {
+        self.comName = comName;
+        self.content = content;
+        self.statusId = statusId;
+        self.comImg = comImg;
+    }
+    return self;
+}
+
 @end

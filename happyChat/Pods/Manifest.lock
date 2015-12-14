@@ -2,13 +2,18 @@ PODS:
   - AVOSCloud (3.1.6.7)
   - AVOSCloudIM (3.1.6.7):
     - AVOSCloud
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
 
 DEPENDENCIES:
   - AVOSCloud
   - AVOSCloudIM
+  - SDWebImage
 
 SPEC CHECKSUMS:
   AVOSCloud: 7af6267747894eadfd14560db08ea99a51b57fc0
   AVOSCloudIM: 0d907059ae770b50ff0e424a4d7cb8f01171b319
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
 
 COCOAPODS: 0.39.0

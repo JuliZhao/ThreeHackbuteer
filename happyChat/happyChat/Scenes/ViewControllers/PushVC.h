@@ -10,4 +10,8 @@
 
 @interface PushVC : UIViewController
 
+@property (strong, nonatomic) NSString *content;
+@property (strong, nonatomic) NSString *userName;
+@property (strong, nonatomic) UIImage *picture;
+
 @end

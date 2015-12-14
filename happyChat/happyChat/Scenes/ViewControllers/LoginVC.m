@@ -13,14 +13,30 @@
 @property (strong, nonatomic) IBOutlet UITextField *userNameTF;
 @property (strong, nonatomic) IBOutlet UITextField *userPswTF;
 - (IBAction)action4Login:(UIButton *)sender;
+- (IBAction)textSecureAction:(UIButton *)sender;
 
 @end
 
 @implementation LoginVC
 
+static UINavigationController *loginVC = nil;
++(UINavigationController *)sharedLoginVC{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        loginVC = [sb instantiateViewControllerWithIdentifier:@"loginNav"];
+    });
+    return loginVC;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.userPswTF.secureTextEntry = YES;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:(UIBarButtonItemStyleDone) target:self action:@selector(back:)];
+}
+
+-(void) back:(UIBarButtonItem *)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,14 +58,24 @@
     [AVUser logInWithUsernameInBackground:_userNameTF.text password:_userPswTF.text block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             NSLog(@"登陆成功");
-            TabBarVC *tabVC = [TabBarVC sharedTabBarVC];
-            [self showDetailViewController:tabVC sender:nil];
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         } else {
             NSLog(@"登录失败:%@",error);
         }
     }];
+}
 
-    
-    
+-(void)viewWillDisappear:(BOOL)animated{
+    self.userPswTF.text = nil;
+}
+
+- (IBAction)textSecureAction:(UIButton *)sender {
+    if (_userPswTF.secureTextEntry == NO) {
+        [sender setImage:[UIImage imageNamed:@"闭眼.png"] forState:UIControlStateNormal];
+        _userPswTF.secureTextEntry = YES;
+    }else{
+        [sender setImage:[UIImage imageNamed:@"睁眼.png"] forState:UIControlStateNormal];
+        _userPswTF.secureTextEntry = NO;
+    }
 }
 @end

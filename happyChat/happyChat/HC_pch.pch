@@ -16,5 +16,16 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import "AVOSCloudIM.h"
 #import "LeanCloudDBHelper.h"
+#import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
+#import "Helper.h"
+
 
 #endif /* HC_pch_pch */
+
+#ifndef __OPTIMIZE__
+# define NSLog(...) {}
+#else
+# define NSLog(...) NSLog(__VA_ARGS__)
+#endif
+
