@@ -1,16 +1,14 @@
 //
 //  LeanCloudDBHelper.m
-//  LoveChat
+//  URLencode
 //
-//  Created by zy on 15/11/30.
-//  Copyright © 2015年 李成鹏.com. All rights reserved.
+//  Created by 王冬 on 15/12/4.
+//  Copyright © 2015年 王冬. All rights reserved.
 //
 
 #import "LeanCloudDBHelper.h"
 #import <objc/message.h>
-
 @implementation LeanCloudDBHelper
-
 // 保存对象
 + (void)saveObjectWithClassName:(NSString *)className Model:(id)model CallBack:(Callback)callback{
     AVObject *post = [AVObject objectWithClassName:className];
@@ -42,19 +40,26 @@
 }
 
 // 查询所有
-+ (void)findAllWithClassName:(NSString *)className Return:(ReturnObject)returnObject{
++ (void)findAllWithClassName:(NSString *)className HasArrayKey:(NSString *)fileArrayKey Return:(ReturnObject)returnObject{
     AVQuery *query = [AVQuery queryWithClassName:className];
+    [query orderByDescending:@"createdAt"];
+    if (fileArrayKey) {
+        [query includeKey:fileArrayKey];
+    }
     query.cachePolicy = kAVCachePolicyNetworkElseCache;
     query.maxCacheAge = 24*3600;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error == nil) returnObject(objects);
-        else returnObject(error);
+        else returnObject(nil);
     }];
 }
 
 // 条件查询
-+ (void)findObjectWithClassName:(NSString *)className ConditionKey:(NSString *)conditionKey ConditionValue:(id)conditionValue Return:(ReturnObject)returnObject{
++ (void)findObjectWithClassName:(NSString *)className ConditionKey:(NSString *)conditionKey ConditionValue:(id)conditionValue HasArrayKey:(NSString *)fileArrayKey Return:(ReturnObject)returnObject{
     AVQuery *query = [AVQuery queryWithClassName:className];
+    if (fileArrayKey) {
+        [query includeKey:fileArrayKey];
+    }
     query.cachePolicy = kAVCachePolicyNetworkElseCache;
     query.maxCacheAge = 24*3600;
     [query whereKey:conditionKey equalTo:conditionValue];
@@ -71,7 +76,7 @@
         [query whereKey:conditionKey equalTo:conditionValue];
     }
     [query countObjectsInBackgroundWithBlock:^(NSInteger number, NSError *error) {
-        if (!error) returnObject([NSString stringWithFormat:@"%ld",number]);
+        if (!error) returnObject([NSString stringWithFormat:@"%ld",(long)number]);
         else returnObject(error);
     }];
 }
@@ -115,8 +120,6 @@
         }];
     }
 }
-
-
 
 
 @end

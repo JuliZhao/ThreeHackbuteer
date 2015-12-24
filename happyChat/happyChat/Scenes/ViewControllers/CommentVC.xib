@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentVC">
+            <connections>
+                <outlet property="tv4comment" destination="sck-ao-5Xc" id="VrE-Ev-xej"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh0-h6-GEd">
+                    <rect key="frame" x="325" y="351" width="30" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Bh0-h6-GEd" secondAttribute="height" multiplier="1:1" id="aMv-Lm-n1p"/>
+                        <constraint firstAttribute="height" constant="30" id="vM9-h9-FNP"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="导航.png"/>
+                    <connections>
+                        <action selector="action4Comment:" destination="-1" eventType="touchUpInside" id="vRo-ok-szO"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sck-ao-5Xc">
+                    <rect key="frame" x="10" y="64" width="355" height="267"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.96987864729999995" blue="0.92554798699999996" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sck-ao-5Xc" secondAttribute="trailing" constant="10" id="bML-dZ-ETv"/>
+                <constraint firstItem="sck-ao-5Xc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="fmQ-Td-YHX"/>
+                <constraint firstAttribute="trailing" secondItem="Bh0-h6-GEd" secondAttribute="trailing" constant="20" id="iLp-bg-jW8"/>
+                <constraint firstItem="sck-ao-5Xc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="nPN-NW-319"/>
+                <constraint firstItem="Bh0-h6-GEd" firstAttribute="top" secondItem="sck-ao-5Xc" secondAttribute="bottom" constant="20" id="tib-Ks-MqY"/>
+                <constraint firstItem="sck-ao-5Xc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="z9O-Wu-hcK"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="252.5" y="288.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="导航.png" width="24" height="24"/>
+    </resources>
+</document>

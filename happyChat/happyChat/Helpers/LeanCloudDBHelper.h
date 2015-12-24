@@ -1,25 +1,22 @@
 //
 //  LeanCloudDBHelper.h
-//  LoveChat
+//  URLencode
 //
-//  Created by zy on 15/11/30.
-//  Copyright © 2015年 李成鹏.com. All rights reserved.
+//  Created by 王冬 on 15/12/4.
+//  Copyright © 2015年 王冬. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <AVOSCloud/AVOSCloud.h>
-typedef void (^Callback)(BOOL result);
+typedef void  (^Callback)(BOOL result);
 typedef void (^ReturnObject)(id result);
 
 typedef enum {
     PhoneNumber = 0,
     UserName,
-} LoginType;
-
+}LoginType;
 @interface LeanCloudDBHelper : NSObject
-
 @property(nonatomic, copy) ReturnObject returnResult;
-
 /**
  *  增加记录/修改记录
  *  如果model存在则是修改记录，否则就是添加记录
@@ -43,7 +40,7 @@ typedef enum {
  *
  *  @param className    表名
  */
-+ (void)findAllWithClassName:(NSString *)className Return:(ReturnObject)returnObject;
++ (void)findAllWithClassName:(NSString *)className HasArrayKey:(NSString *)fileArrayKey Return:(ReturnObject)returnObject;
 
 /**
  *  条件查询
@@ -52,7 +49,7 @@ typedef enum {
  *  @param conditionKey   条件名
  *  @param conditionValue 条件的值
  */
-+ (void)findObjectWithClassName:(NSString *)className ConditionKey:(NSString *)conditionKey ConditionValue:(id)conditionValue Return:(ReturnObject)returnObject;
++ (void)findObjectWithClassName:(NSString *)className ConditionKey:(NSString *)conditionKey ConditionValue:(id)conditionValue HasArrayKey:(NSString *)fileArrayKey Return:(ReturnObject)returnObject;
 
 /**
  *  获取记录个数
@@ -79,5 +76,4 @@ typedef enum {
  *  @param pwd      密码
  */
 + (void)loginWithKey:(LoginType)type Value:(NSString *)value Pwd:(NSString *)pwd CallBack:(ReturnObject)callback;
-
 @end

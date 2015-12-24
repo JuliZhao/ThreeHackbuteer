@@ -11,7 +11,10 @@
 @interface User : NSObject
 // 用户名
 @property (nonatomic, strong) NSString *name;
-// 密码
-@property (nonatomic, strong) NSString *psw;
+// 头像
+@property (nonatomic, strong) UIImage *userImage;
+
+-(instancetype)initWithName:(NSString *)name
+                                  userImage:(UIImage *)userImage;
 
 @end

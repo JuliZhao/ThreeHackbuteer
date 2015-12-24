@@ -2,7 +2,7 @@
 //  FriendCell.m
 //  happyChat
 //
-//  Created by lanou3g on 15/12/4.
+//  Created by zy on 15/12/4.
 //  Copyright © 2015年 zy. All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.imgView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

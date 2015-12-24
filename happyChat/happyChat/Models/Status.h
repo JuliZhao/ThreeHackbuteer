@@ -18,7 +18,25 @@
 @property (nonatomic, strong) NSArray *picArray;
 // 地址
 @property (nonatomic, strong) NSString *address;
+// 发布时间
+@property (nonatomic, strong) NSDate *pushTime;
+// 头像
+@property (nonatomic, strong) NSString *userImage;
 // 类型 （广场还是朋友圈）
 @property (nonatomic, strong) NSString *type;
+// 发布状态的id
+@property (nonatomic, strong) NSString *objectId;
+// userId
+@property (nonatomic, strong) NSString *userId;
+
+- (instancetype)initWithUserName:(NSString *)name
+                         content:(NSString *)content
+                        picArray:(NSArray *)picArray
+                         address:(NSString *)address
+                        pushTime:(NSDate *)pushTime
+                       userImage:(NSString *)userImage
+                            type:(NSString *)type
+                        objectId:(NSString *)objectId
+                          userId:(NSString *)userId;
 
 @end
